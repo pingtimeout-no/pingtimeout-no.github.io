@@ -5,5 +5,10 @@ body {
 
 h1, h2 {
     font-family: 'Permanent Marker', cursive;
+}
+h1 {
     color: #404040;
+}
+h2 {
+    color: #a64d79;
 }
