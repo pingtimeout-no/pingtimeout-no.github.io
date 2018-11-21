@@ -1,14 +1,80 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
-    margin: 50px;
+    margin-bottom: 100px;
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2 {
-    font-family: 'Permanent Marker', cursive;
+h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Roboto Mono', monospace;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f0f0f0;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+}
+    footer span:before {
+        content: " | ";
+    }
+    footer span:first-child:before {
+        display: none;
+    }
+
+.site-header {
+    background: #001a3e;
+}
+a {
+    color: #808080;
+    transition: ease-in-out color .15s, ease-in-out border-color .15s;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+a:hover {
+    color: #f26122;
+    text-decoration: none;
+    border-bottom: 2px solid #f26122;
+}
+a.external::after {
+    content: "\f35d";
+    font: normal normal normal 14px/1 "Font Awesome 5 Free";
+    margin-left: 0.5rem;
+}
+
 h1 {
-    color: #404040;
+    font-size: 2rem;
+    font-weight: bold;
 }
 h2 {
-    color: #a64d79;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.site-header a {
+    font-size: 14px;
+    line-height: 50px;
+}
+.site-header a.active {
+    background: #f26122;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.site-header a:hover {
+    border-bottom: none;
 }
